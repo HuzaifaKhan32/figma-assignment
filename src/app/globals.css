@@ -2,26 +2,656 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+html,
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+.inter {
+  font-family: var(--font-Inter);
+}
+
+.navbar {
+  background-color: white;
+  padding: 16px 120px;
+  height: 15.94vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.logo {
+  width: 65.4px;
+  height: 22.87px;
+}
+
+.logo .logo-image {
+  width: 65.4px;
+  height: 22.87px;
+}
+
+.search-bar {
+  width: 372px;
+  height: 58px;
+  background-color: #F5F5F5;
+  padding: 16px;
+  display: flex;
+}
+
+.search-bar .search-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.search-bar input {
+  background-color: #F5F5F5;
+  margin-left: 8px;
+  border: none;
+  outline: none;
+}
+
+.pages-link {
+  width: 369px;
+  height: 19px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 700;
+
+}
+
+.pages-link span {
+  opacity: 30%;
+}
+
+.pages-link .active-tag {
+  opacity: 100%;
+}
+
+.cart-section {
+  width: 144px;
+  height: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.cart-images {
+  width: 32px;
+  height: 32px;
+}
+
+
+.hero-section {
+  width: 100%;
+  height: 530px;
+  background-color: #211C24;
+  padding: 0px 120px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero-section .left {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.content .first {
+  opacity: 40%;
+  height: 32px;
+}
+
+.content h1 {
+  font-size: 4.5rem;
+  font-weight: 0;
+  white-space: nowrap;
+}
+
+.content .pro {
+  font-weight: 900;
+}
+
+.content .second {
+  font-size: 1.1rem;
+  color: #909090;
+  margin: 24px 0px;
+}
+
+.content button {
+  width: 13.98vw;
+  height: 9.22vh;
+  text-align: center;
+  border: 1px solid white;
+  border-radius: 6px;
+}
+
+.hero-section .right {
+  width: 50%;
+}
+
+.hero-section .right .Iphone {
+  background: url("../app/images/Iphone Image.png") no-repeat center center;
+  width: 406px;
+  height: 530px;
+  object-fit: cover;
+}
+
+.page2 {
+  width: 100%;
+  height: 98.84vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.page2 .left {
+  width: 50%;
+}
+
+.page2 .left .first {
+  width: 100%;
+  height: 54.04vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.page2 .left .first .text {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.page2 .left .first .text h1 {
+  text-align: left;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.page2 .left .first .text p {
+  text-align: left;
+  font-size: 0.87rem;
+  opacity: 30%;
+}
+
+
+
+.page2 .left .first .playstation {
+  background: url("../app/images/PlayStation.png") no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+.page2 .left .second {
+  width: 100%;
+  height: 44.81vh;
+  background-color: #EDEDED;
+  display: flex;
+}
+
+.page2 .left .second .section-1 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page2 .left .second .section-1 .text {
+  padding-right: 21px;
+  font-size: 1.81rem;
+  font-weight: 200;
+}
+
+.page2 .left .second .section-1 .text .max {
+  font-weight: 800;
+}
+
+.page2 .left .second .section-1 .text p {
+  font-size: 0.87rem;
+  color: #909090;
+  width: 11.71vw;
+}
+
+.page2 .left .second .section-1 .headphone {
+  background: url("../app/images/headphone.png") no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+.page2 .left .second .section-2 {
+  width: 100%;
+  height: 100%;
+  background-color: #353535;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page2 .left .second .section-2 .vision-pro {
+  background: url("../app/images/vission.png") no-repeat center left;
+  width: 100%;
+  height: 100%;
+  padding-left: 156px;
+  padding-right: 46px;
+  font-size: 1.81rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 200;
+  flex-direction: column;
+}
+
+.page2 .left .second .section-2 .vision-pro .pro {
+  font-weight: 800;
+}
+
+.page2 .left .second .section-2 .vision-pro p {
+  font-size: 0.87rem;
+  color: #909090;
+  width: 11.71vw;
+}
+
+
+.page2 .right {
+  width: 50%;
+  height: 98.84vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #EDEDED;
+}
+
+.page2 .right .text {
+  width: 331px;
+  height: 325px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 0px 44px;
+}
+
+.page2 .right .text h1 {
+  font-size: 64px;
+  font-weight: 100;
+  line-height: 70px;
+}
+
+.page2 .right .text span {
+  font-weight: 800;
+}
+
+.page2 .right .text p {
+  font-size: 14px;
+  color: #909090;
+}
+
+.page2 .right .text button {
+  width: 191px;
+  height: 56px;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 6px;
+}
+
+.page2 .right .macbook {
+  background: url("../app/images/macbook.png") no-repeat right center;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.page3 {
+  width: 100%;
+  height: 352px;
+  padding: 80px 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.page3 .section1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 32px;
+}
+
+.page3 .section1 h3 {
+  font-size: 24px;
+}
+
+.page3 .section1 .arrows {
+  background: url("../app/images/Arrow`s.png") no-repeat center center;
+  width: 80px;
+  height: 32px;
+}
+
+.page3 .section2 {
+  width: 100%;
+}
+
+.cat-container {
+  width: 100%;
+  height: 128px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.cat-container .box {
+  width: 160px;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  background-color: #EDEDED;
+  border-radius: 8px;
+}
+
+.page4 {
+  width: 100%;
+  height: 1056px;
+  padding: 56px 120px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page4 .section-1 {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.page4 .section-1 ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #8B8B8B;
+  width: 40%;
+}
+
+.page4 .section-1 ul .dark-font {
+  opacity: 100%;
+  color: black;
+}
+
+.page4 .section-2 {
+
+  width: 100%;
+  height: 880px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-lines {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.page4 .section-2 .product-lines .card1 {
+  width: 268px;
+  height: 432px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  background-color: #F6F6F6;
+  border-radius: 9px;
+  padding: 21px;
+}
+
+.page4 .section-2 .product-lines .card1 .icon {
+  width: 84%;
+  display: flex;
+  justify-content: flex-end;
+  height: 32px;
+  opacity: 30%;
+
+}
+
+.page4 .section-2 .product-lines .card1 .icon .favourite {
+
+  width: 32px;
+  height: 32px;
+}
+
+.page4 .section-2 .product-lines .card1 .Iphone {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page4 .section-2 .product-lines .card1 .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 160px;
+  width: auto;
+}
+
+.page4 .section-2 .product-lines .card1 .text span:nth-child(1) {
+  text-align: center;
+  display: inline-block;
+}
+
+.page4 .section-2 .product-lines .card1 .text span:nth-child(2) {
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  display: inline-block;
+}
+
+
+.page4 .section-2 .product-lines .card1 .text button {
+  width: 180px;
+  height: 48px;
+  text-align: center;
+  background-color: black;
+  color: white;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+.page5{
+  width: 100%;
+  height: 448px;
+}
+
+.page5 .banner{
+  width: 100%;
+  height: 448px;
+}
+
+.footer-container{
+  background-color: black;
+  padding: 120px 104px;
+  width: 100%;
+  height: 540px;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.footer {
+  
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer .left {
+  width: 50%;
+  height: 94.87px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+
+
+.footer .left .text {
+  font-size: 14px;
+  color: #CFCFCF;
+  width: 384px;
+  height: 48px;
+}
+
+.footer .right {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer .right .section-1 {
+  width: 50%;
+}
+
+.footer .right .section-1 .section {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 256px;
+}
+
+.footer .right .section-1 .section .heading{
+  font-weight: 800;
+}
+
+.footer .right .section-1 .section .sub-heading {
+  color: #CFCFCF;
+  font-size: 14px;
+}
+
+
+.footer .right .section-2 {
+  width: 50%;
+
+}
+
+.footer .right .section-2 .section {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 256px;
+}
+
+.footer .right .section-2 .section .heading{
+  font-weight: 800;
+}
+
+.footer .right .section-2 .section .sub-heading {
+  color: #CFCFCF;
+  font-size: 14px;
+}
+
+.footer .links{
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+.footer-container .links{
+  display: flex;
+  width: 173px;
+  height: 16px;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 1024px) {
+  .navbar{
+    padding: 16px 24px;
+  }
+  .search-bar{
+    display: none;
+  }
+  .pages-link{
+    display: none;
+  }
+  .cart-section{
+    display: none;
+  }
+  .hero-section{
+    flex-direction: column;
+    padding: 5px;
+    height: 135vh;
+  }
+  .hero-section .left{
+    width: 100%;
+    height: 100%;
+  }
+  .hero-section .right{
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+  }
+  .hero-section .right .Iphone{
+    width: 100%;
+    height: 100%;
+  }
+  .content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .content h1{
+    font-size: 4rem;
+    white-space: wrap;
+    text-align: center;
+  }
+  .content .first{
+    font-size: 1.5rem;
+  }
+  .content .second{
+    text-align: center;
+  }
+  .hero-section .right .Iphone{
+    background-position: top;
+  }
+  .page2{
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+  .page2 .left .first{
+    flex-direction: column;
+    width: 100%;
+  }
+  .page2 .left .second{
+    flex-direction: column;
+    width: 100%;
+  }
+  .page2 .right{
+    width: 100%;
   }
 }
